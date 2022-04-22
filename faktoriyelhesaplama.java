@@ -1,24 +1,25 @@
-package OrnekProjeler;
-
 import java.util.Scanner;
 
-public class faktoriyelhesaplama {
+public class faktoriyelHesaplama {
 
 	public static void main(String[] args) {
 
-		Scanner reader = new Scanner(System.in);
+		int n;
+		int fakt = 1;
 		
-		System.out.print("Bir sayi Giriniz");
+		System.out.println("Bir Sayı Giriniz Lütfen");
 		
-		int num = reader.nextInt();
-		int sayac = num;
-		long faktoriyel = 1;
+		Scanner tara = new Scanner(System.in);
+		n = tara.nextInt();
 		
-		while(sayac>1) {
-			faktoriyel *=sayac;
-			sayac--;
+		int alınandeger = n;
+		
+		while(alınandeger >=1) {
+			fakt = fakt * alınandeger;
+			alınandeger = alınandeger - 1;
 		}
-		System.out.printf("%d Say�s�n�n Fakt�riyeli  = %d \n" , num , faktoriyel);
+		
+		System.out.println(n + "!=" + fakt);
 	}
 
 }
